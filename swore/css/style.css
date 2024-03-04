@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "lato", sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(50px);
+  transition-duration: 0.3s;
+  position: fixed;
+  padding: 2.2rem 5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.navbar:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(60px);
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding-top: 1rem;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.7rem;
+  padding: 1rem 1rem;
+  transition-duration: 0.3s;
+  font-weight: 400;
+  position: relative;
+}
+a:hover {
+  color: white;
+}
+.left-service > a:hover {
+  border-bottom: none;
+}
+.right-service > a:hover {
+  border-bottom: none;
+}
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  left: 6rem;
+}
+.logo > h1 {
+  margin: 0;
+  font-family: "Libre Baskerville", serif;
+  letter-spacing: 0.2rem;
+}
+
+.nav-menu__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 2rem;
+}
+.nav-menu__items > a {
+  margin-right: 3rem;
+}
+.nav-menu__items a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.nav-menu__items a:hover::after {
+  transform: scaleX(1);
+}
+
+.main-bg-video video {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -5;
+}
+
+.main-bg {
+  position: relative;
+}
+.video-content {
+  position: absolute;
+  left: 8rem;
+  bottom: 8rem;
+  text-align: left;
+  z-index: 1;
+  line-height: 0;
+}
+.video-content > h1 {
+  font-size: 13rem;
+  margin: 2rem 0;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 600;
+  max-width: 20rem;
+  line-height: 12rem;
+}
+.video-content p {
+  font-weight: 600;
+  font-size: 2rem;
+  padding-left: 0.7rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+.video-content button {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  padding: 1rem 5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+}
+.video-content button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: black;
+}
+
+.img-page1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 8rem 8rem 0 8rem;
+}
+
+.img {
+  position: relative;
+  overflow: hidden;
+  height: 90vh;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-text {
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  text-align: center;
+}
+.img button {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 2rem 5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+}
+.img button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+}
+.img > h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.f-img > img {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 90vh;
+  margin-top: 16rem;
+}
+.f-img-text {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  width: 100%;
+  text-align: center;
+}
+.f-img-text h1 {
+  margin: 0;
+  padding: 2rem;
+  font-weight: 400;
+}
+.all-video {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  padding: 4rem 8rem 0 8rem;
+}
+.main-video {
+  position: relative;
+  overflow: hidden;
+  height: 70vh;
+}
+
+.main-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-conteiner-header h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 500;
+  margin: 12rem 4rem 0 4rem;
+}
+.video-text-all {
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 8rem 0 8rem;
+  line-height: 1.2rem;
+}
+.video-text > h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.video-text > p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.video-text button {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: black;
+  font-weight: 500;
+  transition-duration: 0.3s;
+}
+.video-text button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.two-cont {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  margin: 16rem 8rem;
+}
+.left {
+  position: relative;
+}
+.left-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 3rem;
+}
+.left-text > h1 {
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+.left-text > p {
+  font-size: 2rem;
+  margin: 3rem;
+}
+.right img {
+  width: 100%;
+  height: 110vh;
+}
+
+.left-text > a:hover {
+  color: black;
+}
+.left-text > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.left-text > a:hover::after {
+  transform: scaleX(1);
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  background-color: black;
+  backdrop-filter: blur(10px);
+  padding: 5rem;
+}
+.footer-icon > a {
+  color: white;
+  border-bottom: none;
+  padding: 2rem 1rem;
+  font-size: 2rem;
+}
